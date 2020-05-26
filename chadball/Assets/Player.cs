@@ -4,18 +4,51 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private GameObject playerController;
+    public float ShieldRadius;
+
+    private GameController gameController;
+
     private void Start()
     {
-        playerController = GameObject.Find("PlayerController");
+        gameController = GameObject.Find("GameController").GetComponent<GameController>();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, ShieldRadius);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "asteroid")
+        switch(collision.gameObject.tag)
         {
-            collision.gameObject.GetComponent<Obstacle>().hitpoints = 0;
-            playerController.GetComponent<PlayerController>().damageHealth(5f);
+            case "coin":
+                gameController.AddMoney(collision.gameObject.GetComponent<Coin>().value);
+                Destroy(collision.gameObject);
+                break;
+            case "asteroid":
+                collision.gameObject.GetComponent<Asteroid>().hitpoints = 0;
+                gameController.DamagePlayer(33);
+
+                if (gameController.GetPlayerHealth() <= 0)
+                {
+                    Destroy(transform.gameObject);
+                }
+                break;
+        }
+
+    }
+
+    private void Update()
+    {
+        Collider2D[] overlapped = Physics2D.OverlapCircleAll(transform.position, ShieldRadius);
+
+        foreach(Collider2D col in overlapped)
+        {
+            if(col.gameObject.tag == "coin")
+            {
+                col.gameObject.GetComponent<Coin>().targetUnit = gameObject;
+            }
         }
     }
 }

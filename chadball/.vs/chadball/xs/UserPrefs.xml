@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{1D91F1A6-153D-101D-E2DD-27913756433B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Coin.cs">
+    <Files>
+      <File FileName="Assets/Weapons/Bomb.cs" Line="1" Column="1" />
+      <File FileName="Assets/PlayerController.cs" />
+      <File FileName="Assets/Obstacle.cs" Line="1" Column="1" />
+      <File FileName="Assets/Shots/Shot.cs" />
+      <File FileName="Assets/Ball.cs" />
+      <File FileName="Assets/Weapons/RocketBomb.cs" Line="34" Column="36" />
+      <File FileName="Assets/ObstacleSpawner.cs" Line="30" Column="14" />
+      <File FileName="Assets/GameController.cs" />
+      <File FileName="Assets/StarSpawner.cs" />
+      <File FileName="Assets/Player.cs" Line="14" Column="1" />
+      <File FileName="Assets/Scripts/Pulsate.cs" />
+      <File FileName="Assets/Scripts/Asteroid.cs" Line="51" Column="76" />
+      <File FileName="Assets/Scripts/Coin.cs" Line="7" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="chadball" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Coin.cs" selected="True" />
+              </Node>
+              <Node name="Weapons" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d64a27e9-d54f-4c7c-a448-9ae69886a980" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

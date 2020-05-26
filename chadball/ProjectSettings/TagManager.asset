@@ -8,6 +8,9 @@ TagManager:
   - ball
   - hardpoint
   - asteroid
+  - bomb
+  - rocket
+  - coin
   layers:
   - Default
   - TransparentFX
